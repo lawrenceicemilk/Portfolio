@@ -1,0 +1,76 @@
+/* ============================================================
+   Portfolio - Main Stylesheet
+   ============================================================ */
+
+@theme {
+    --color-base: #080A18;
+    --color-surface: #101225;
+    --color-card: #14182D;
+    --color-primary: #3D6BFF;
+    --color-secondary: #6D8CFF;
+    --color-main: #F2F3F7;
+    --color-muted: #9A9EAF;
+    --color-outline: #252940;
+    --font-sans: "Arial", sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--color-base);
+    color: var(--color-main);
+    font-family: var(--font-sans);
+}
+
+.bg-grid {
+    background-image:
+        linear-gradient(to right, rgba(37, 41, 64, 0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(37, 41, 64, 0.3) 1px, transparent 1px);
+    background-size: 100px 100px;
+}
+
+.section-header {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--color-muted);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    color: var(--color-main);
+}
+
+@keyframes pulseSlow {
+    0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+    50% { transform: scale(1.25) translate(-40px, 30px); opacity: 0.55; }
+}
+@keyframes floatSlow {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+    50% { transform: translate(50px, -60px) scale(1.2); opacity: 0.45; }
+}
+@keyframes driftGlow {
+    0%, 100% { transform: translate(0, 0) scale(0.9); opacity: 0.25; }
+    50% { transform: translate(-50px, -40px) scale(1.15); opacity: 0.4; }
+}
+@keyframes floatReverse {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+    50% { transform: translate(-60px, 50px) scale(1.2); opacity: 0.38; }
+}
+@keyframes pulseCyan {
+    0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.2; }
+    50% { transform: scale(1.18) translate(30px, -30px); opacity: 0.35; }
+}
+
+.animate-pulse-slow    { animation: pulseSlow    10s ease-in-out infinite; }
+.animate-float-slow    { animation: floatSlow    15s ease-in-out infinite; }
+.animate-drift         { animation: driftGlow    18s ease-in-out infinite; }
+.animate-float-reverse { animation: floatReverse 14s ease-in-out infinite; }
+.animate-pulse-cyan    { animation: pulseCyan    12s ease-in-out infinite; }
